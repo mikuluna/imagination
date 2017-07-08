@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+    <session-factory>
+   		 <!-- 配置数据库驱动 -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+ 		 <!-- 配置数据库连接 -->
+        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/imagenation</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">123550csq1003</property>
+        <!-- 是否显示sql -->
+        <property name="show_sql">true</property>
+        
+        <!-- 配置数据库方言 -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- 配置是否要逆向生成数据库-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!--
+        <mapping class="org.hibernate.osgitest.entity.DataPoint"/>-->
+        <!-- 配置HBM文件 -->
+        <mapping class="com.luna.image.entity.LunaManager"/>
+       
+    </session-factory>
+ 
+</hibernate-configuration>
