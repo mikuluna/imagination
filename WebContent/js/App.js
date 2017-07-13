@@ -5,11 +5,14 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider
 		.state("PageTab", {
 			url: "/PageTab",
-			templateUrl: "nav.jsp"	
+			templateUrl: "nav.jsp",
+			
 		})
 		.state("PageTab.Show", {
 			url: "/Show",
-			templateUrl: "show.jsp"		
+			templateUrl: "show.jsp",
+			
+			
 		})
 		.state("PageTab.Imagination", {
 			url: "/Imagination",
@@ -33,19 +36,22 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 		templateUrl: "aboutme.jsp"
 	})
 	.state("PageTab.AboutMe.Exit", {
-		url: "/Exit",
-		templateUrl: "exit.html"
+		url: "/exit",
+		templateUrl: "/exit.html"
 	});
 });
-myApp.controller('testCtrl', function($scope) {
-	$scope.showNavClass=false;
+myApp.controller('testCtrl', function($scope,$timeout) {
+	$scope.noscroll=false;
 	$scope.showClass = false;
 	$scope.showactive=function(){
 		$scope.showClass = true;
-		$scope.showNavClass=false;
+		$scope.noscroll=true;
+		$timeout(function(){
+			$scope.showClass = false;	
+     },2000);		
 	}
 	$scope.showinactive=function(){
 		$scope.showClass = false;
-		$scope.showNavClass=true;
+		$scope.noscroll=false;
 	}
 });

@@ -19,7 +19,7 @@
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
 </head>
-<body class="dm-demo4 {{noscroll ? 'active' : ''}}" data-ng-app="myApp" ng-controller="testCtrl">
+<body class="dm-demo4 noscroll" data-ng-app="myApp" ng-controller="testCtrl">
 	<div class="htmleaf-container">
 		<header class="htmleaf-header">
 			<h1 style="color: black;">欢迎来到小轩脑洞空间</h1>
